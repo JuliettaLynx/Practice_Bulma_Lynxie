@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lynxie</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Шапка -->
+    <nav class="navbar is-sticky">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#main">
+            <h1 class="title is-4">𝓛𝔂𝓷𝔁𝓲𝓮</h1>
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarMenu"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-start" style="margin: 0 auto">
+            <a class="navbar-item" href="#main">Главная</a>
+            <a class="navbar-item" href="#contacts">Контакты</a>
+            <a class="navbar-item" href="#portfolio">Портфолио</a>
+            <a class="navbar-item" href="#prices">Цены</a>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fas fa-phone"></i>
+              </span>
+              <span>+7 (968) 084-50-64</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero секция -->
+    <section class="hero" id="main">
+      <div class="container has-text-centered">
+        <h1 class="logo mb-5">𝓛𝔂𝓷𝔁𝓲𝓮</h1>
+        <h2 class="subtitle is-4 has-text-light">Klimova Sofya</h2>
+        <h2 class="subtitle is-5 has-text-light mb-6">
+          Мастер ногтевого сервиса
+        </h2>
+        <a href="#contacts" class="button is-primary is-medium">Записаться</a>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="section has-background-light" id="contacts">
+      <div class="container">
+        <div class="columns is-desktop">
+          <div class="column">
+            <div class="card contact-card is-flex is-align-items-center">
+              <div class="contact-icon ml-5">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <p class="subtitle is-5 ml-5">13 минут от м. "Беляево"</p>
+            </div>
+          </div>
+
+          <div class="column">
+            <a href="https://t.me/julietta_lynx">
+              <div class="card contact-card is-flex is-align-items-center">
+                <div class="contact-icon ml-5">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <p class="subtitle is-5 ml-5">Актуальная информация</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="column">
+            <a href="https://wa.me/79680845064">
+              <div class="card contact-card is-flex is-align-items-center">
+                <div class="contact-icon ml-5">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <p class="subtitle is-5 ml-5">Консультация</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <h2 class="title is-2 section-title">Портфолио</h2>
+
+        <div class="columns">
+          <div class="column">
+            <img
+              src="assets/photo_1.jpg"
+              alt="Работа 1"
+              class="portfolio-image"
+            />
+          </div>
+
+          <div class="column">
+            <img
+              src="assets/photo_2.jpg"
+              alt="Работа 2"
+              class="portfolio-image"
+            />
+          </div>
+
+          <div class="column">
+            <img
+              src="assets/photo_3.jpg"
+              alt="Работа 3"
+              class="portfolio-image"
+            />
+          </div>
+        </div>
+
+        <div class="has-text-centered mt-6">
+          <a href="#" class="button is-primary is-medium">Больше работ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Цены -->
+    <section class="section has-background-light" id="prices">
+      <div class="container">
+        <h2 class="title is-2 section-title">Цены</h2>
+
+        <div class="card table-container pl-6">
+          <table class="price-table">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="title is-5 mb-1">Комплекс I</div>
+                  <div class="service-desc">Снятие, маникюр, покрытие</div>
+                </td>
+                <td class="has-text-weight-medium is-size-4">1500 ₽</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="title is-5 mb-1">Комплекс II</div>
+                  <div class="service-desc">
+                    Снятие, маникюр, укрепление, покрытие
+                  </div>
+                </td>
+                <td class="has-text-weight-medium is-size-4">2000 ₽</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="title is-5 mb-1">Маникюр</div>
+                  <div class="service-desc">Без покрытия</div>
+                </td>
+                <td class="has-text-weight-medium is-size-4">1000 ₽</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="title is-5 mb-1">Наращивание</div>
+                </td>
+                <td class="has-text-weight-medium is-size-4">2000 ₽</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="title is-5 mb-1">Коррекция наращивания</div>
+                </td>
+                <td class="has-text-weight-medium is-size-4">1500 ₽</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="title is-5 mb-1">Дизайн</div>
+                  <div class="service-desc">Градиент, мрамор</div>
+                </td>
+                <td class="has-text-weight-medium is-size-4">300 ₽</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="title is-5 mb-1">Дизайн</div>
+                  <div class="service-desc">
+                    Геометрия, втирка, кошка, френч
+                  </div>
+                </td>
+                <td class="has-text-weight-medium is-size-4">200 ₽</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Акции -->
+    <section class="section">
+      <div class="container">
+        <div class="promo-card">
+          <h2 class="title is-2 has-text-white mb-4">
+            Скидка 20% на первый приём
+          </h2>
+          <a href="#contacts" class="button is-light is-medium"
+            >Записаться со скидкой</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+      <div class="container pl-6">
+        <div class="columns">
+          <div class="column">
+            <div class="footer-title">Реквизиты</div>
+            <p>ИП: Климова С.Д.</p>
+            <p>ИНН: 123456789012</p>
+            <p>ОГРНИП: 123456789012345</p>
+          </div>
+
+          <div class="column">
+            <div class="footer-title">© 2025</div>
+            <p>Все права защищены</p>
+          </div>
+
+          <div class="column">
+            <div class="footer-title">Документы</div>
+            <p><a href="#">Политика конфиденциальности</a></p>
+            <p><a href="#">Договор-оферта</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+:root {
+  --primary-color: #6d5cae;
+  --primary-light: #8a7bc9;
+  --text-color: #333;
+  --light-text: #777;
+  --light-bg: #e7e2f8;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+}
+
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+
+.has-background-light {
+  background-color: var(--light-bg) !important;
+}
+
+.button.is-primary {
+  background-color: var(--primary-light) !important;
+  border-color: var(--primary-light);
+  border-radius: 30px;
+}
+
+.button.is-primary:hover,
+.button.is-primary:focus {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.button.is-light.is-medium {
+  border-radius: 30px;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("assets/back.jpeg") center/cover no-repeat;
+  color: white;
+  padding: 120px 20px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 5rem;
+  letter-spacing: 2px;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card {
+  padding: 15px 15px;
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.portfolio-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-image:hover {
+  opacity: 0.9;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.price-table tr {
+  border-bottom: 2px solid var(--light-bg);
+}
+
+.price-table td {
+  padding: 15px 10px;
+}
+
+.service-desc {
+  color: var(--light-text);
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.promo-card {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
+  color: white;
+  border-radius: 10px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #2a2a2a;
+  color: #ccc;
+  padding: 40px 0 20px;
+}
+
+.footer a {
+  color: #ccc;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer-title {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.section-title:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.is-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+@media screen and (max-width: 512px) {
+  .is-size-4 {
+    font-size: 20px !important;
+  }
+
+  .card.table-container.pl-6 {
+    padding-left: 12px !important;
+  }
+}
