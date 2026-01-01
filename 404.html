@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Страница не найдена | 𝓛𝔂𝓷𝔁𝓲𝓮</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      :root {
+        --primary-color: #6d5cae;
+        --primary-light: #8a7bc9;
+        --text-color: #333;
+        --light-text: #777;
+        --light-bg: #e7e2f8;
+      }
+      .tag.is-primary {
+        background-color: var(--primary-light) !important;
+        color: white !important;
+        text-decoration: none !important;
+      }
+      .tag.is-primary:hover {
+        background-color: var(--primary-color) !important;
+        border-color: var(--primary-color) !important;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      .error-page {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .error-number {
+        font-size: 8rem;
+        font-weight: 900;
+        color: var(--primary-color);
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+      .error-animation {
+        animation: bounce 1s infinite;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+      .search-box {
+        max-width: 500px;
+        margin: 2rem auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar is-sticky">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#main">
+            <h1 class="title is-4">𝓛𝔂𝓷𝔁𝓲𝓮</h1>
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarMenu"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-start" style="margin: 0 auto">
+            <a class="navbar-item" href="index.html">Главная</a>
+            <a class="navbar-item" href="index.html#contacts">Контакты</a>
+            <a class="navbar-item" href="review.html">Отзывы</a>
+            <a class="navbar-item" href="faq.html">FAQ</a>
+            <a class="navbar-item" href="index.html#portfolio">Портфолио</a>
+            <a class="navbar-item" href="index.html#prices">Цены</a>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fas fa-phone"></i>
+              </span>
+              <span>+7 (968) 084-50-64</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section error-page">
+      <div class="container has-text-centered">
+        <div class="error-animation">
+          <div class="error-number">404</div>
+        </div>
+
+        <h1 class="title is-2 mb-4">Упс! Страница не найдена</h1>
+
+        <p class="subtitle is-4 mb-5">
+          Возможно, эта страница была удалена или перемещена.
+        </p>
+
+        <!-- Поиск по сайту -->
+        <div class="search-box">
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <input
+                class="input is-medium"
+                type="text"
+                placeholder="Что ищете? Например: 'маникюр' или 'цены'"
+              />
+            </div>
+            <div class="control">
+              <button class="button is-primary is-medium">
+                <span class="icon">
+                  <i class="fas fa-search"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Основные ссылки -->
+        <div class="buttons is-centered mt-6">
+          <a href="index.html" class="button is-primary is-large">
+            <span class="icon">
+              <i class="fas fa-home"></i>
+            </span>
+            <span>На главную</span>
+          </a>
+
+          <a href="#contacts" class="button is-light is-large">
+            <span class="icon">
+              <i class="fas fa-calendar-check"></i>
+            </span>
+            <span>Записаться</span>
+          </a>
+        </div>
+
+        <!-- Быстрая навигация -->
+        <div class="content mt-6">
+          <p class="has-text-grey">Или перейдите к другим разделам:</p>
+          <div class="tags are-medium is-centered mt-3">
+            <a href="index.html#portfolio" class="tag is-primary is-light"
+              >Портфолио</a
+            >
+            <a href="index.html#prices" class="tag is-primary is-light">Цены</a>
+            <a href="review.html" class="tag is-primary is-light"
+              >Оставить отзыв</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Футер  -->
+    <footer class="footer">
+      <div class="container pl-6">
+        <div class="columns">
+          <div class="column">
+            <div class="footer-title">Реквизиты</div>
+            <p>ИП: Климова С.Д.</p>
+            <p>ИНН: 123456789012</p>
+            <p>ОГРНИП: 123456789012345</p>
+          </div>
+
+          <div class="column">
+            <div class="footer-title">© 2025</div>
+            <p>Все права защищены</p>
+          </div>
+
+          <div class="column">
+            <div class="footer-title">Документы</div>
+            <p><a href="#">Политика конфиденциальности</a></p>
+            <p><a href="#">Договор-оферта</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Простой поиск
+      document
+        .querySelector(".button.is-primary.is-medium")
+        .addEventListener("click", function () {
+          const searchText = document
+            .querySelector("input")
+            .value.toLowerCase();
+
+          const portfolioKeywords = [
+            "портфолио",
+            "portfolio",
+            "пример",
+            "работы",
+            "примеры",
+          ];
+
+          const faqKeywords = [
+            "faq",
+            "FAQ",
+            "вопрос",
+            "ответ",
+            "помощь",
+            "справка",
+            "help",
+          ];
+
+          const reviewKeywords = [
+            "отзыв",
+            "review",
+            "отзывы",
+            "рекомендация",
+            "recommendation",
+            "recommend",
+            "мнение",
+            "opinion",
+            "оценка",
+            "rating",
+            "комментарий",
+            "comment",
+          ];
+          const priceKeywords = [
+            "цены",
+            "цена",
+            "price",
+            "стоимость",
+            "cost",
+            "прайс",
+            "price list",
+            "прайс-лист",
+            "тариф",
+            "tariff",
+            "услуги",
+            "services",
+            "service",
+            "стоит",
+            "сколько",
+            "how much",
+          ];
+          window.location.href = portfolioKeywords.some((word) =>
+            searchText.toLowerCase().includes(word)
+          )
+            ? "index.html#portfolio"
+            : priceKeywords.some((word) =>
+                searchText.toLowerCase().includes(word)
+              )
+            ? "index.html#prices"
+            : reviewKeywords.some((word) =>
+                searchText.toLowerCase().includes(word)
+              )
+            ? "review.html"
+            : faqKeywords.some((word) =>
+                searchText.toLowerCase().includes(word)
+              )
+            ? "faq.html"
+            : "index.html#main";
+        });
+    </script>
+  </body>
+</html>

@@ -13,8 +13,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
+    <!-- Тест 404 -->
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000">
+      <a href="404.html" class="button is-danger is-small">
+        <span class="icon">
+          <i class="fas fa-bug"></i>
+        </span>
+        <span>Тест 404</span>
+      </a>
+    </div>
+
     <!-- Шапка -->
     <nav class="navbar is-sticky">
       <div class="container">
@@ -38,8 +49,10 @@
 
         <div id="navbarMenu" class="navbar-menu">
           <div class="navbar-start" style="margin: 0 auto">
-            <a class="navbar-item" href="#main">Главная</a>
+            <a class="navbar-item" href="index.html">Главная</a>
             <a class="navbar-item" href="#contacts">Контакты</a>
+            <a class="navbar-item" href="review.html">Отзывы</a>
+            <a class="navbar-item" href="faq.html">FAQ</a>
             <a class="navbar-item" href="#portfolio">Портфолио</a>
             <a class="navbar-item" href="#prices">Цены</a>
           </div>
@@ -66,7 +79,9 @@
         <h2 class="subtitle is-5 has-text-light mb-6">
           Мастер ногтевого сервиса
         </h2>
-        <a href="#contacts" class="button is-primary is-medium">Записаться</a>
+        <a href="#contacts" class="button is-primary is-medium contact-button"
+          >Записаться</a
+        >
       </div>
     </section>
 
@@ -217,9 +232,46 @@
           <h2 class="title is-2 has-text-white mb-4">
             Скидка 20% на первый приём
           </h2>
-          <a href="#contacts" class="button is-light is-medium"
+          <a href="#contacts" class="button is-light is-medium contact-button"
             >Записаться со скидкой</a
           >
+        </div>
+      </div>
+    </section>
+
+    <section class="section has-background-light" id="contacts">
+      <div class="container">
+        <div class="columns is-desktop">
+          <div class="column">
+            <div class="card contact-card is-flex is-align-items-center">
+              <div class="contact-icon ml-5">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <p class="subtitle is-5 ml-5">13 минут от м. "Беляево"</p>
+            </div>
+          </div>
+
+          <div class="column">
+            <a href="https://t.me/julietta_lynx">
+              <div class="card contact-card is-flex is-align-items-center">
+                <div class="contact-icon ml-5">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <p class="subtitle is-5 ml-5">Актуальная информация</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="column">
+            <a href="https://wa.me/79680845064">
+              <div class="card contact-card is-flex is-align-items-center">
+                <div class="contact-icon ml-5">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <p class="subtitle is-5 ml-5">Консультация</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -248,5 +300,11 @@
         </div>
       </div>
     </footer>
+
+    <button class="button is-primary scroll-top-button" id="scrollTopButton">
+      <span class="icon">
+        <i class="fas fa-chevron-up"></i>
+      </span>
+    </button>
   </body>
 </html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Частые вопросы | 𝓛𝔂𝓷𝔁𝓲𝓮</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <style>
+      .faq-item {
+        margin-bottom: 1rem;
+        border: 1px solid var(--light-bg);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .faq-question {
+        background-color: white;
+        padding: 1rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+      }
+      
+      .faq-question .title {
+        margin-bottom: 0;
+      }
+      
+      .faq-question:hover {
+        background-color: #f9f9f9;
+      }
+      .faq-answer {
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        background-color: white;
+      }
+      .faq-answer.is-active {
+        padding: 1.5rem;
+        max-height: 500px;
+      }
+      
+      .faq-icon {
+        transition: transform 0.3s ease;
+      }
+      .faq-icon.is-active {
+        transform: rotate(180deg);
+      }
+      .contact-panel {
+        background: linear-gradient(
+          135deg,
+          var(--primary-light),
+          var(--primary-color)
+        );
+        color: white;
+        border-radius: 10px;
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar is-sticky">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#main">
+            <h1 class="title is-4">𝓛𝔂𝓷𝔁𝓲𝓮</h1>
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarMenu"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-start" style="margin: 0 auto">
+            <a class="navbar-item" href="index.html">Главная</a>
+            <a class="navbar-item" href="#contacts">Контакты</a>
+            <a class="navbar-item" href="review.html">Отзывы</a>
+            <a class="navbar-item" href="faq.html">FAQ</a>
+            <a class="navbar-item" href="index.html#portfolio">Портфолио</a>
+            <a class="navbar-item" href="index.html#prices">Цены</a>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fas fa-phone"></i>
+              </span>
+              <span>+7 (968) 084-50-64</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- FAQ Контент -->
+    <section class="section faq-section has-background-light">
+      <div class="container">
+        <div class="has-text-centered mb-6">
+          <h1 class="title is-2 mb-3">Часто задаваемые вопросы</h1>
+        </div>
+
+        <!-- Аккордеон FAQ -->
+        <div class="faq-accordion">
+          <!-- Вопрос 1 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(1)">
+              <span class="title is-5">Как записаться на процедуру?</span>
+              <span class="icon faq-icon" id="icon-1">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </div>
+            <div class="faq-answer" id="answer-1">
+              <p>Записаться можно несколькими способами:</p>
+              <ul>
+                <li>
+                  Через WhatsApp:
+                  <a href="https://wa.me/79680845064">+7 (968) 084-50-64</a>
+                </li>
+                <li>
+                  В Telegram:
+                  <a href="https://t.me/julietta_lynx">@julietta_lynx</a>
+                </li>
+                <li>По телефону: +7 (968) 084-50-64</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Вопрос 2 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(2)">
+              <span class="title is-5">Где мы находимся?</span>
+              <span class="icon faq-icon" id="icon-2">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </div>
+            <div class="faq-answer" id="answer-2">
+              <p>Я принимаю у себя на дому, в 13 минутах ходьбы от метро "Беляево".</p>
+              <p>
+                Точный адрес отправляется после записи для вашего удобства и
+                безопасности.
+              </p>
+            </div>
+          </div>
+
+          <!-- Вопрос 3 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(3)">
+              <span class="title is-5">Какова длительность процедуры?</span>
+              <span class="icon faq-icon" id="icon-3">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </div>
+            <div class="faq-answer" id="answer-3">
+              <p>Длительность зависит от вида услуги:</p>
+              <ul>
+                <li>Комплексный маникюр: ~2 часа</li>
+                <li>Наращивание: ~3 часа</li>
+                <li>Коррекция: ~1.5 часа</li>
+                <li>Дизайн добавляет 30-60 минут к основному времени</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Вопрос 4 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(5)">
+              <span class="title is-5"
+                >Что делать, если нужно перенести запись?</span
+              >
+              <span class="icon faq-icon" id="icon-5">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </div>
+            <div class="faq-answer" id="answer-5">
+              <p>Если вам нужно перенести запись, пожалуйста:</p>
+              <ol>
+                <li>Сообщите об этом как можно раньше (минимум за 3 часа)</li>
+                <li>Свяжитесь со мной через WhatsApp или Telegram</li>
+                <li>Укажите удобное для вас время для переноса</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Вопрос 5 -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(6)">
+              <span class="title is-5">Какие материалы используются?</span>
+              <span class="icon faq-icon" id="icon-6">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </div>
+            <div class="faq-answer" id="answer-6">
+              <p>
+                Работаю только с профессиональными материалами премиум-класса:
+              </p>
+              <ul>
+                <li>Гелевые системы: Kodi, Kupa, Bluesky</li>
+                <li>Дезинфекция и стерилизация: медицинские стандарты</li>
+                <li>Одноразовые расходные материалы</li>
+                <li>Сертифицированные лаки и гели</li>
+              </ul>
+              <p>Все материалы гипоаллергенны и безопасны.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <div class="contact-panel">
+          <div class="columns is-vcentered">
+            <div class="column">
+              <h3 class="title is-3 has-text-white">Не нашли ответ?</h3>
+            </div>
+            <div class="column has-text-right">
+              <a href="review.html" class="button is-light is-large">
+                <span class="icon">
+                  <i class="fas fa-comment-dots"></i>
+                </span>
+                <span>Задать вопрос</span>
+              </a>
+            </div>
+          </div>
+
+
+      </div>
+    </section>
+
+    <section class="section has-background-light" id="contacts">
+      <div class="container">
+        <div class="columns is-desktop">
+          <div class="column">
+            <div class="card contact-card is-flex is-align-items-center">
+              <div class="contact-icon ml-5">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <p class="subtitle is-5 ml-5">13 минут от м. "Беляево"</p>
+            </div>
+          </div>
+
+          <div class="column">
+            <a href="https://t.me/julietta_lynx">
+              <div class="card contact-card is-flex is-align-items-center">
+                <div class="contact-icon ml-5">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <p class="subtitle is-5 ml-5">Актуальная информация</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="column">
+            <a href="https://wa.me/79680845064">
+              <div class="card contact-card is-flex is-align-items-center">
+                <div class="contact-icon ml-5">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <p class="subtitle is-5 ml-5">Консультация</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container pl-6">
+        <div class="columns">
+          <div class="column">
+            <div class="footer-title">Реквизиты</div>
+            <p>ИП: Климова С.Д.</p>
+            <p>ИНН: 123456789012</p>
+            <p>ОГРНИП: 123456789012345</p>
+          </div>
+
+          <div class="column">
+            <div class="footer-title">© 2025</div>
+            <p>Все права защищены</p>
+          </div>
+
+          <div class="column">
+            <div class="footer-title">Документы</div>
+            <p><a href="#">Политика конфиденциальности</a></p>
+            <p><a href="#">Договор-оферта</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleFAQ(number) {
+    // Получаем все элементы ответов и иконок
+    const allAnswers = document.querySelectorAll('.faq-answer');
+    const allIcons = document.querySelectorAll('.faq-icon');
+    
+    // Если выбранный вопрос уже открыт - закрываем его
+    const answer = document.getElementById(`answer-${number}`);
+    const icon = document.getElementById(`icon-${number}`);
+    
+    if (answer.classList.contains("is-active")) {
+      // Закрываем выбранный вопрос
+      answer.classList.remove("is-active");
+      icon.classList.remove("is-active");
+    } else {
+      // Закрываем все вопросы
+      allAnswers.forEach(ans => ans.classList.remove("is-active"));
+      allIcons.forEach(ic => ic.classList.remove("is-active"));
+      
+      // Открываем выбранный вопрос
+      answer.classList.add("is-active");
+      icon.classList.add("is-active");
+    }
+  }
+    </script>
+  </body>
+</html>

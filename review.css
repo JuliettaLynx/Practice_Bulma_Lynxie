@@ -1,0 +1,205 @@
+.review-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.review-track {
+    display: flex;
+    transition: all 0.5s ease;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.review-track.fade-out {
+    opacity: 0.3;
+    transform: scale(0.98);
+}
+
+.review-card {
+    flex: 0 0 calc(100% / 3);
+    padding: 0 15px;
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 1024px) {
+    .review-card {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .review-card {
+        flex: 0 0 100%;
+    }
+}
+
+.review-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--primary-light);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.review-carousel-btn:hover {
+    background: var(--primary-light);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.review-carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.review-carousel-btn--prev {
+    left: -25px;
+}
+
+.review-carousel-btn--next {
+    right: -25px;
+}
+
+@media (max-width: 768px) {
+    .review-carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .review-carousel-btn--prev {
+        left: -20px;
+    }
+    
+    .review-carousel-btn--next {
+        right: -20px;
+    }
+}
+
+
+.review-section {
+  background-color: #f8f9fa;
+}
+
+.review-carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.review-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.review-card {
+  min-width: 100%;
+  padding: 0 15px;
+}
+
+@media (min-width: 769px) {
+  .review-card {
+    min-width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .review-card {
+    min-width: 33.333%;
+  }
+}
+
+.review-content {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: -5px 5px 7px 5px rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+
+.review-rating {
+  color: #ffc107;
+  margin-bottom: 15px;
+}
+
+.review-text {
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.review-text::before {
+  content: "“";
+  font-size: 4rem;
+  color: var(--primary-light);
+  opacity: 0.3;
+  position: absolute;
+  left: -10px;
+  top: -20px;
+  font-family: Georgia, serif;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.carousel-arrow {
+  background: white;
+  border: 2px solid var(--primary-light);
+  color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 15px;
+  transition: all 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background: var(--primary-light);
+  color: white;
+  transform: scale(1.1);
+}

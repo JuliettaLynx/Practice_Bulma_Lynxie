@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lynxie-review</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="review.css" />
+    <script src="script.js" defer></script>
+    <script src="review.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar is-sticky">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#main">
+            <h1 class="title is-4">𝓛𝔂𝓷𝔁𝓲𝓮</h1>
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarMenu"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-start" style="margin: 0 auto">
+            <a class="navbar-item" href="index.html">Главная</a>
+            <a class="navbar-item" href="#contacts">Контакты</a>
+            <a class="navbar-item" href="review.html">Отзывы</a>
+            <a class="navbar-item" href="faq.html">FAQ</a>
+            <a class="navbar-item" href="index.html#portfolio">Портфолио</a>
+            <a class="navbar-item" href="index.html#prices">Цены</a>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fas fa-phone"></i>
+              </span>
+              <span>+7 (968) 084-50-64</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section has-background-light">
+      <div class="container">
+        <h2 class="title is-2 is-flex is-justify-content-center">
+          Оставьте отзыв
+        </h2>
+        <div class="columns is-centered">
+          <div class="column is-6">
+            <form id="feedbackForm">
+              <div class="field">
+                <label class="label">Имя</label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Ваше имя"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                  <input
+                    class="input"
+                    type="email"
+                    placeholder="example@email.com"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Тема</label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select required>
+                      <option value="" disabled selected>Выберите тему</option>
+                      <option>Предложение</option>
+                      <option>Жалоба</option>
+                      <option>Вопрос</option>
+                      <option>Благодарность</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Сообщение</label>
+                <div class="control">
+                  <textarea
+                    class="textarea"
+                    placeholder="Ваше сообщение..."
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control">
+                  <label class="checkbox">
+                    <input type="checkbox" required />
+                    Соглашаюсь на обработку персональных данных
+                  </label>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control is-flex is-justify-content-center">
+                  <button class="button is-primary" type="submit">
+                    Отправить отзыв
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Обновляем блок с каруселью отзывов -->
+    <section class="section review-section" id="reviews">
+      <div class="container">
+        <h2 class="title is-2 has-text-centered mb-6">Что говорят клиенты</h2>
+
+        <div class="review-carousel-container">
+          <!-- Кнопка назад -->
+          <button
+            class="review-carousel-btn review-carousel-btn--prev"
+            id="prevReview"
+          >
+            <span class="icon">
+              <i class="fas fa-chevron-left"></i>
+            </span>
+          </button>
+
+          <!-- Контейнер карусели -->
+          <div class="review-track" id="reviewTrack">
+            <!-- Отзыв 1 -->
+            <div class="review-card">
+              <div class="review-content">
+                <div class="review-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">
+                  Обратилась после неудачного опыта в другом месте. Мастер учёл
+                  особенности моих ногтей, подобрал подходящую длину и форму.
+                  Домашняя обстановка располагает к расслаблению. Хорошая носка
+                  - за 3 недели только один ноготь потребовал небольшой
+                  коррекции.
+                </p>
+                <div class="review-author">
+                  <div class="author-avatar" style="background: #6d5cae">
+                    АМ
+                  </div>
+                  <div>
+                    <h4 class="title is-5 mb-1">Анна М.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Отзыв 2 -->
+            <div class="review-card">
+              <div class="review-content">
+                <div class="review-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">
+                  Приятно удивила домашняя атмосфера - нет суеты, как в салоне.
+                  Мастер внимательно отнесся к пожеланиям по укреплению ногтей.
+                  Носка отличная, даже с активной работой руками покрытие
+                  осталось целым 4 недели. Кофе во время процедуры был кстати.
+                </p>
+                <div class="review-author">
+                  <div class="author-avatar" style="background: #8a7bc9">
+                    ЕК
+                  </div>
+                  <div>
+                    <h4 class="title is-5 mb-1">Екатерина К.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Отзыв 3 -->
+            <div class="review-card">
+              <div class="review-content">
+                <div class="review-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">
+                  Первый раз делала маникюр на дому - впечатления положительные.
+                  Учтены все нюансы, которые я хотела исправить после прошлого
+                  мастера. Приятная атмосфера, чай и спокойная музыка. Носка
+                  порадовала - 3 недели без сколов и отслоек. Буду возвращаться.
+                </p>
+                <div class="review-author">
+                  <div class="author-avatar" style="background: #6d5cae">
+                    МС
+                  </div>
+                  <div>
+                    <h4 class="title is-5 mb-1">Марина С.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Отзыв 4 -->
+            <div class="review-card">
+              <div class="review-content">
+                <div class="review-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <p class="review-text">
+                  Мастер внимательно выслушал все пожелания по форме и дизайну.
+                  Атмосфера спокойная, во время процедуры предложили чай. Ногти
+                  держались 3 недели без проблем.
+                </p>
+                <div class="review-author">
+                  <div class="author-avatar" style="background: #8a7bc9">
+                    ОЛ
+                  </div>
+                  <div>
+                    <h4 class="title is-5 mb-1">Ольга Л.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Отзыв 5 -->
+            <div class="review-card">
+              <div class="review-content">
+                <div class="review-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <p class="review-text">
+                  Процедура прошла комфортно, предложили выбор напитков. Учтены
+                  все пожелания по дизайну. Носит хорошо - 2,5 недели без
+                  изменений. Чувствуется, что специалист с опытом.
+                </p>
+                <div class="review-author">
+                  <div class="author-avatar" style="background: #6d5cae">
+                    ДИ
+                  </div>
+                  <div>
+                    <h4 class="title is-5 mb-1">Дарья И.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Отзыв 6 -->
+            <div class="review-card">
+              <div class="review-content">
+                <div class="review-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">
+                  Хожу к Соне уже больше года. Ни разу не было разочарования.
+                  Всегда идеальная работа, чистоплотность, пунктуальность. Цены
+                  адекватные, качество на высоте. Лучший мастер!
+                </p>
+                <div class="review-author">
+                  <div class="author-avatar" style="background: #8a7bc9">
+                    ТП
+                  </div>
+                  <div>
+                    <h4 class="title is-5 mb-1">Татьяна П.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Кнопка вперед -->
+          <button
+            class="review-carousel-btn review-carousel-btn--next"
+            id="nextReview"
+          >
+            <span class="icon">
+              <i class="fas fa-chevron-right"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section has-background-light" id="contacts">
+      <div class="container">
+        <div class="columns is-desktop">
+          <div class="column">
+            <div class="card contact-card is-flex is-align-items-center">
+              <div class="contact-icon ml-5">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <p class="subtitle is-5 ml-5">13 минут от м. "Беляево"</p>
+            </div>
+          </div>
+
+          <div class="column">
+            <a href="https://t.me/julietta_lynx">
+              <div class="card contact-card is-flex is-align-items-center">
+                <div class="contact-icon ml-5">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <p class="subtitle is-5 ml-5">Актуальная информация</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="column">
+            <a href="https://wa.me/79680845064">
+              <div class="card contact-card is-flex is-align-items-center">
+                <div class="contact-icon ml-5">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <p class="subtitle is-5 ml-5">Консультация</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container pl-6">
+        <div class="columns">
+          <div class="column">
+            <div class="footer-title">Реквизиты</div>
+            <p>ИП: Климова С.Д.</p>
+            <p>ИНН: 123456789012</p>
+            <p>ОГРНИП: 123456789012345</p>
+          </div>
+
+          <div class="column">
+            <div class="footer-title">© 2025</div>
+            <p>Все права защищены</p>
+          </div>
+
+          <div class="column">
+            <div class="footer-title">Документы</div>
+            <p><a href="#">Политика конфиденциальности</a></p>
+            <p><a href="#">Договор-оферта</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
