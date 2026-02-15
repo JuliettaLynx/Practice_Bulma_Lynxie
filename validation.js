@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (phoneValue === "") {
       showError(phone, "Введите номер телефона");
       isValid = false;
-    } else if (phoneDigits.length < 10) {
-      showError(phone, "Введите 10 цифр номера");
+    } else if (phoneDigits.length < 10 || phoneDigits.length > 12) {
+      showError(phone, "Введите 10 ци фр номера");
       isValid = false;
     }
 
