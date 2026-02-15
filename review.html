@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="review.css" />
     <script src="script.js" defer></script>
     <script src="review.js" defer></script>
+    <script src="validation.js" defer></script>
+    <script src="consoleLogger.js" defer></script>
   </head>
   <body>
     <nav class="navbar is-sticky">
@@ -71,13 +73,15 @@
           <div class="column is-6">
             <form id="feedbackForm">
               <div class="field">
-                <label class="label">Имя</label>
+                <label class="label"
+                  >Имя <span class="has-text-danger">*</span></label
+                >
                 <div class="control">
                   <input
                     class="input"
                     type="text"
-                    placeholder="Ваше имя"
-                    required
+                    id="name"
+                    placeholder="Имя Фамилия"
                   />
                 </div>
               </div>
@@ -88,17 +92,33 @@
                   <input
                     class="input"
                     type="email"
+                    id="email"
                     placeholder="example@email.com"
-                    required
                   />
                 </div>
               </div>
 
               <div class="field">
-                <label class="label">Тема</label>
+                <label class="label"
+                  >Телефон <span class="has-text-danger">*</span></label
+                >
+                <div class="control">
+                  <input
+                    class="input"
+                    type="tel"
+                    id="phone"
+                    placeholder="+7 (___) ___-__-__"
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label"
+                  >Тема <span class="has-text-danger">*</span></label
+                >
                 <div class="control">
                   <div class="select is-fullwidth">
-                    <select required>
+                    <select id="topic">
                       <option value="" disabled selected>Выберите тему</option>
                       <option>Предложение</option>
                       <option>Жалоба</option>
@@ -110,14 +130,17 @@
               </div>
 
               <div class="field">
-                <label class="label">Сообщение</label>
+                <label class="label"
+                  >Сообщение <span class="has-text-danger">*</span></label
+                >
                 <div class="control">
                   <textarea
                     class="textarea"
+                    id="message"
                     placeholder="Ваше сообщение..."
                     rows="5"
-                    required
                   ></textarea>
+                  <div class="char-counter" id="messageCounter">0/250</div>
                 </div>
               </div>
 
@@ -142,7 +165,7 @@
         </div>
       </div>
     </section>
-    <!-- Обновляем блок с каруселью отзывов -->
+
     <section class="section review-section" id="reviews">
       <div class="container">
         <h2 class="title is-2 has-text-centered mb-6">Что говорят клиенты</h2>
@@ -394,5 +417,11 @@
         </div>
       </div>
     </footer>
+
+    <button class="button is-primary scroll-top-button" id="scrollTopButton">
+      <span class="icon">
+        <i class="fas fa-chevron-up"></i>
+      </span>
+    </button>
   </body>
 </html>

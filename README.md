@@ -8,4 +8,4 @@
 - Font Awesome Icons
 
 ## Ссылки
-- [Публичная страница на GitHub Pages](https://juliettalynx.github.io/Lynxie/)
+- [Публичная страница на GitHub Pages](https://juliettalynx.github.io/Practice_Bulma_Lynxie/)
